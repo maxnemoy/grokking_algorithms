@@ -1,4 +1,5 @@
 import 'package:grokking_algorithms/chapter1/binary_search.dart';
+import 'package:grokking_algorithms/utils/check_extension.dart';
 import 'package:test/test.dart';
 import 'dart:math';
 

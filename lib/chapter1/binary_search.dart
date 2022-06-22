@@ -1,3 +1,5 @@
+import 'package:grokking_algorithms/utils/check_extension.dart';
+
 class BinarySearch<T> {
   final List<T> items;
 
@@ -9,7 +11,6 @@ class BinarySearch<T> {
     while (start <= end) {
       int middleIndex = ((start + end) / 2).ceil();
       T itm = items[middleIndex]!;
-      print("S $start M $middleIndex E $end");
       if (itm == item) {
         return middleIndex;
       }
@@ -24,17 +25,4 @@ class BinarySearch<T> {
   }
 }
 
-class UnsupportedTypeError extends Error {}
 
-extension Check on Object {
-  operator >(diff) {
-    switch (diff.runtimeType) {
-      case int:
-        return (this as int) > (diff as int);
-      case double:
-        return (this as double) > (diff as double);
-      default:
-        throw UnsupportedTypeError();
-    }
-  }
-}
